@@ -10,11 +10,11 @@ Every close bracket has a corresponding open bracket of the same type.
 
 const isValid = (s) => {
   //use the stack to add all the opening parentheses -- '[', '{' and '('
-  const stack = [];
+  let stack = [];
 
   for (let i = 0; i < s.length; i++) {
 
-    const lastParenthese = stack[stack.length - 1];
+    let lastParenthese = stack[stack.length - 1];
 
     if (s[i] === '(' || s[i] === '{' || s[i] === '[') {
       stack.push(s[i]);
